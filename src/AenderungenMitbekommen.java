@@ -29,7 +29,7 @@ public class AenderungenMitbekommen
         });
         aenderungenPruefen.start();
 
-        //AenderungenMitbekommen.doalways(() -> test2());
+        AenderungenMitbekommen.doalways(() -> test());
     }
 
     private static void test(){

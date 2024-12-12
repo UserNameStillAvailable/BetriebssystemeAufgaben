@@ -29,7 +29,7 @@ public class Berechnung
  */
 public class KomplexeRechnungParallel
 {
-    
+    //Net so richtig schöne Lösung
     //Aufgabe 4
     public static void main(String[] args) throws InterruptedException
     {
@@ -63,13 +63,14 @@ class komplexeBerechnung extends Thread
     Doublewrapper ergebnis;
     public void run(){
         double y = 0.0;
-        final int N = 100000000;
+        final int N = 100_000_000;
         /*
         List<Thread> res = new ArrayList<>();
 
         for (int i=0; i<N; i++){
             int finalI = i;
             Thread re = new Thread(() -> {
+            //gefahr für Race Conditions
                 ergebnis.increment(Math.sin(x + finalI * Math.PI/N) * (Math.PI/N));
             });
             re.start();
